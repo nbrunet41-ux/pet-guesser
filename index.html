@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pet Guessr 💨</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Accueil -->
+  <section id="screen-home" class="card">
+    <h1 class="logo-text">Pet Guessr 💨</h1>
+    <p class="subtitle">Devine à qui appartient le prout 😁</p>
+    <button id="playBtn" class="primary">Jouer</button>
+  </section>
+
+  <!-- Pseudo -->
+  <section id="screen-name" class="card hidden">
+    <h2>Entre ton pseudo</h2>
+    <input id="playerName" type="text" maxlength="16" placeholder="Ton pseudo" />
+    <button id="startQuizBtn" class="primary">Jouer</button>
+    <p id="nameMsg" class="error"></p>
+  </section>
+
+  <!-- Jeu -->
+  <section id="screen-game" class="card hidden">
+    <div class="topbar">
+      <div id="roundInfo"></div>
+      <div id="scoreInfo"></div>
+    </div>
+
+    <button id="soundBtn" class="ghost">🔊 Écouter</button>
+
+    <div id="grid" class="grid"></div>
+
+    <div id="feedback" class="feedback"></div>
+    <button id="nextBtn" class="primary hidden">Suivant ➜</button>
+
+    <audio id="roundAudio"></audio>
+  </section>
+
+  <!-- Fin -->
+  <section id="screen-end" class="card hidden">
+    <h2>Score final</h2>
+    <p id="finalScore"></p>
+
+    <h3>🏆 Classement (Top 10)</h3>
+    <ol id="leaderboard" class="leaderboard"></ol>
+
+    <button id="restartBtn" class="primary">Rejouer</button>
+  </section>
+
+  <script src="game.js"></script>
+</body>
+</html>
